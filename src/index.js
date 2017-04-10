@@ -39,3 +39,7 @@ app.all('*', (req, res) => {
 app.listen(port, () => {
   console.log('App running in ' + port)
 })
+
+export {
+  app,
+}
