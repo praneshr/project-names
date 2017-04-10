@@ -1412,7 +1412,6 @@ const adjectives = [
   'competitive',
   'concrete',
   'reluctant',
-  'fucking',
   'precious',
   'tremendous',
   'burning',

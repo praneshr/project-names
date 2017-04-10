@@ -2,10 +2,14 @@
   "name": "project-names",
   "version": "1.0.0",
   "description": "Random project names generator as a RESTful service",
-  "main": "index.js",
+  "main": "build/index.js",
+  "engines": {
+    "node": "7.7.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:watch": "babel src --watch --out-dir build"
+    "start": "node build/index.js",
+    "build:watch": "babel src --watch --out-dir build",
+    "build": "babel src --out-dir build"
   },
   "repository": {
     "type": "git",
@@ -19,7 +23,8 @@
   "homepage": "https://github.com/praneshr/project-names#readme",
   "devDependencies": {
     "babel-cli": "^6.24.0",
-    "babel-preset-env": "^1.3.2"
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-stage-0": "^6.24.1"
   },
   "dependencies": {
     "express": "^4.15.2"
