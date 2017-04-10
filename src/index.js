@@ -5,13 +5,13 @@ const app = express()
 const port = process.env.PORT || 3030
 
 app.get('/names', (req, res) => {
-  const { count, numbered, separator } = req.query
-  const name = generator.constructNames(count, numbered === 'false' ? false : true).joinNames(separator)
+  const { words, numbered, separator } = req.query
+  const name = generator.constructNames(words, numbered === 'false' ? false : true).joinNames(separator)
   res.send(name)
 })
 app.get('/names/raw', (req, res) => {
-  const { count, numbered, separator } = req.query
-  const name = generator.constructNames(count, numbered === 'false' ? false : true).rawNames()
+  const { words, numbered, separator } = req.query
+  const name = generator.constructNames(words, numbered === 'false' ? false : true).rawNames()
   res.json(name)
 })
 

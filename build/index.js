@@ -17,20 +17,20 @@ var port = process.env.PORT || 3030;
 
 app.get('/names', function (req, res) {
   var _req$query = req.query,
-      count = _req$query.count,
+      words = _req$query.words,
       numbered = _req$query.numbered,
       separator = _req$query.separator;
 
-  var name = _generator2.default.constructNames(count, numbered === 'false' ? false : true).joinNames(separator);
+  var name = _generator2.default.constructNames(words, numbered === 'false' ? false : true).joinNames(separator);
   res.send(name);
 });
 app.get('/names/raw', function (req, res) {
   var _req$query2 = req.query,
-      count = _req$query2.count,
+      words = _req$query2.words,
       numbered = _req$query2.numbered,
       separator = _req$query2.separator;
 
-  var name = _generator2.default.constructNames(count, numbered === 'false' ? false : true).rawNames();
+  var name = _generator2.default.constructNames(words, numbered === 'false' ? false : true).rawNames();
   res.json(name);
 });
 
